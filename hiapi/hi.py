@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, world!\n'
+    return 'Hi!\n'
 
 def parse_args():
     parser = argparse.ArgumentParser()
