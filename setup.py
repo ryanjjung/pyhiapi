@@ -8,7 +8,7 @@ setup(
     version='0.1.2',
     author='Ryan Jung',
     author_email='gradysghost@gmail.com',
-    package=['pyhiapi'],
+    packages=['hiapi'],
     url='https://github.com/GradysGhost/pyhiapi',
     license='LICENCE',
     description='PyHiAPI - Simple test API',
