@@ -21,5 +21,10 @@ def main():
     opts = parse_args()
     app.run(host=opts.bind, port=opts.port)
 
+# Support for uWSGI 
+def application(env, start_response):
+    start_response('200 OK', [('Content-Type', 'text/plain')])
+    return [b'Hi!\n']
+
 if __name__ == "__main__":
     main()
