@@ -2,29 +2,33 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-from flask import Flask
+import flask
 
-app = Flask(__name__)
+RESPONSE_CODE = 200
+
+app = flask.Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hi!\n'
+    global RESPONSE_CODE
+    if RESPONSE_CODE == 200:
+        return 'Hi!\n'
+    else:
+        flask.abort(RESPONSE_CODE)
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-b', '--bind-address',
                         dest='bind', default='127.0.0.1')
     parser.add_argument('-p', '--port', dest='port', default=4000, type=int)
+    parser.add_argument('-c', '--response_code', dest='code', default=200, type=int)
     return parser.parse_args()
 
 def main():
+    global RESPONSE_CODE
     opts = parse_args()
+    RESPONSE_CODE = opts.code
     app.run(host=opts.bind, port=opts.port)
-
-# Support for uWSGI 
-def application(env, start_response):
-    start_response('200 OK', [('Content-Type', 'text/plain')])
-    return [b'Hi!\n']
 
 if __name__ == "__main__":
     main()
