@@ -8,8 +8,9 @@ RESPONSE_CODE = 200
 
 app = flask.Flask(__name__)
 
-@app.route('/')
-def hello():
+@app.route('/', defaults={'path': ''}, methods=['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'])
+@app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'])
+def hello(path):
     global RESPONSE_CODE
     if RESPONSE_CODE == 200:
         return 'Hi!\n'
