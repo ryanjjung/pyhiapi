@@ -1,5 +1,8 @@
 # pyhiapi
-A very simple API endpoint, easily deployable for testing purposes
+
+The API that just says hi!
+
+A very simple API endpoint, easily deployable for testing purposes.
 
 ## Installation
 
@@ -7,12 +10,14 @@ A very simple API endpoint, easily deployable for testing purposes
 
 ## Usage
 
-    hiapi [-b <bind address>] [-p <port>]
-    
-    -b, --bind-address: The interface you want to listen on
-    -p, --port: The port you want to listen on
+		hiapi [-h] [-b BIND] [-p PORT] [-c CODE]
+		
+		optional arguments:
+		  -b BIND, --bind-address BIND
+		  -p PORT, --port PORT
+		  -c CODE, --response_code CODE
 
-hiapi defaults to `localhost:4000`.
+hiapi defaults to `localhost:4000` and a `200 OK` response.
 
 ## Testing
 
