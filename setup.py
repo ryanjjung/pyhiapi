@@ -5,11 +5,11 @@ from distutils.core import setup
 
 setup(
     name='pyhiapi',
-    version='0.1.3',
+    version='0.1.4',
     author='Ryan Jung',
-    author_email='gradysghost@gmail.com',
+    author_email='ryanjjung@gmail.com',
     packages=['hiapi'],
-    url='https://github.com/GradysGhost/pyhiapi',
+    url='https://github.com/ryanjjung/pyhiapi',
     license='LICENCE',
     description='PyHiAPI - Simple test API',
     long_description=open('README.md').read(),
