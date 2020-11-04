@@ -10,12 +10,17 @@ A very simple API endpoint, easily deployable for testing purposes.
 
 ## Usage
 
-		hiapi [-h] [-b BIND] [-p PORT] [-c CODE]
-		
-		optional arguments:
-		  -b BIND, --bind-address BIND
-		  -p PORT, --port PORT
-		  -c CODE, --response_code CODE
+    usage: hi.py [-h] [-b BIND] [-c CONFIG] [-p PORT] [-r CODE]
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      -b BIND, --bind-address BIND
+                            Address to bind the server to
+      -c CONFIG, --config CONFIG
+                            A file containing a custom response message
+      -p PORT, --port PORT  The port to listen on
+      -r CODE, --response_code CODE
+                            The response code to send back to requests
 
 hiapi defaults to `localhost:4000` and a `200 OK` response.
 
