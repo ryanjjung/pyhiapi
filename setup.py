@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name='pyhiapi',
-    version='0.1.4',
+    version='0.2.0',
     author='Ryan Jung',
     author_email='ryanjjung@gmail.com',
     packages=['hiapi'],
