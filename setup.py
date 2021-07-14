@@ -1,9 +1,9 @@
 """Set up hiapi
 """
 
-from distutils.core import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='pyhiapi',
     version='0.2.0',
     author='Ryan Jung',
@@ -13,6 +13,7 @@ setup(
     license='LICENCE',
     description='PyHiAPI - Simple test API',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     install_requires=[
         'flask'
     ],
